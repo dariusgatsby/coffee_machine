@@ -8,7 +8,7 @@ def check_money(coffee_type, money_given):
             change = profit - espresso_price
             return f"Thank you your change is ${round(change)}"
         elif profit == espresso_price:
-            return f"Thank you! Enjoy your coffee"
+            return f"Thank you! Enjoy your espresso"
         else:
             difference = espresso_price - profit
             return f"Not enough money, money refunded. Put in ${difference} more."
@@ -18,7 +18,7 @@ def check_money(coffee_type, money_given):
             change = profit - latte_price
             return f"Thank you your change is ${round(change)}"
         elif profit == latte_price:
-            return f"Thank you! Enjoy your coffee"
+            return f"Thank you! Enjoy your latte"
         else:
             difference = latte_price - profit
             return f"Not enough money, money refunded. Put in ${difference} more."
@@ -28,7 +28,7 @@ def check_money(coffee_type, money_given):
             change = profit - cappuccino_price
             return f"Thank you your change is ${round(change)}"
         elif profit == cappuccino_price:
-            return f"Thank you! Enjoy your coffee"
+            return f"Thank you! Enjoy your cappuccino"
         else:
             difference = cappuccino_price - profit
             return f"Not enough money, money refunded. Put in ${difference} more."
@@ -109,7 +109,7 @@ while machine_on:
 
         profit = (quarters_given * quarters) + (dimes_given * dimes) + (nickels_given * nickels) + (
                     pennies_given * pennies)
-        
+
         # Make coffee and update resources
         make_coffee(coffee_choice, MENU, resources)
         # Check if the amount of money is enough and process or deny the transaction
